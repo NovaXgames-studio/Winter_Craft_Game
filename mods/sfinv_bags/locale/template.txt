@@ -1,9 +1,0 @@
-# textdomain: sfinv_bags
-
-Bag=
-Main=
-Bags=
-Small Bag=
-Medium Bag=
-Large Bag=
-Trolley=
