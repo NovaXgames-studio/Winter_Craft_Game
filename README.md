@@ -1,66 +1,57 @@
-# Winter Craft Game (Luanti/Minetest)
+# Wintercraft Reborn
 
-This repository contains the extracted **game package only** for Winter Craft.
+Official game package for **Wintercraft Reborn** on Luanti/Minetest-compatible engines.
 
-It does **not** contain the mobile engine binary (APK native engine).
+This repository contains the **game only** (`wintercraft_game`).
 
-## Project Scope
+## Features
 
-- Game name: `Winter Craft`
-- Source package: Android app data extraction
-- Repository content: `game.conf`, `mods/`, `menu/`, configs, and game assets
-- Out of scope: engine binaries, launcher APK internals, account/network backend
+- Survival and crafting progression
+- Expanded mobs and creatures
+- Nether content and world expansion
+- Decorative blocks and furniture systems
+- HUD, hunger, inventory, and utility gameplay modules
 
-## Current Status
+## Requirements
 
-- The game files are recovered and organized as a Luanti/Minetest game folder.
-- Many mods load correctly on desktop Luanti/Minetest.
-- Some features depend on mobile-specific engine APIs and may require patches.
+- Luanti or Minetest-compatible engine installed
+- A valid `games/` directory in your engine user data folder
 
-## Included Gameplay Modules
-
-Main module groups in `mods/` include:
-
-- Core gameplay: `default`, `farming`, `doors`, `stairs`, `wool`, `bucket`, `boats`, `carts`
-- Mobs: `mobs_redo`, `mobs_animal`, `mobs_monster`, `mobs_npc`, `mobs_humans`, `mob_horse`, `dmobs`
-- World/features: `nether`, `tnt`, `fire`, `flowers`, `xdecor`, `worldedit`, `worldedit_commands`
-- UI/systems: `hud`, `hunger`, `creative`, `craftguide`, `sfinv`, `give_initial_stuff`
-
-## Install (Windows)
+## Installation
 
 1. Close Luanti/Minetest.
-2. Copy this folder into your games directory.
-3. Use this final path:
-   - Minetest: `%APPDATA%\Minetest\games\wintercraft_game`
-   - Luanti: `%APPDATA%\Luanti\games\wintercraft_game`
-4. Start the engine and select **Winter Craft** when creating a world.
+2. Copy this repository folder as:
+   - Windows (Luanti): `%APPDATA%\\Luanti\\games\\wintercraft_game`
+   - Windows (Minetest): `%APPDATA%\\Minetest\\games\\wintercraft_game`
+3. Launch the engine.
+4. Create a new world and select **Winter Craft** as the game.
 
-Important:
+## Included Modules
 
-- The folder name should stay `wintercraft_game` for predictable behavior.
-- If your engine cannot see the game, verify `game.conf` is present in the root.
+The `mods/` folder includes core gameplay systems and content packs such as:
 
-## Compatibility Notes
+- Core: `default`, `farming`, `doors`, `stairs`, `wool`, `bucket`, `boats`, `carts`
+- Creatures: `mobs_redo`, `mobs_animal`, `mobs_monster`, `mobs_npc`, `mobs_humans`, `mob_horse`, `dmobs`
+- World and tools: `nether`, `fire`, `flowers`, `tnt`, `xdecor`, `worldedit`, `worldedit_commands`
+- Interface and progression: `hud`, `hunger`, `creative`, `craftguide`, `sfinv`, `give_initial_stuff`
 
-This game was built for a custom mobile environment. Upstream desktop engines may miss specific APIs.
+## Repository Layout
 
-Example:
+- `game.conf`: game metadata
+- `mods/`: gameplay modules
+- `menu/`: menu assets and definitions
+- `minetest.conf.example`: optional configuration template
+- `LICENSE.txt`: license information
 
-- `minetest.register_on_shopaction` can be absent in stock builds, affecting shop callbacks.
+## Development
 
-If startup fails, read `debug.txt` and patch missing APIs/mod assumptions one by one.
+Contributions are welcome for:
 
-## Legal / Credits
+- Bug fixes
+- Balancing and gameplay updates
+- Content expansion
+- Performance and compatibility improvements
 
-- Original game assets and branding belong to their respective owners.
-- This repository is for preservation, interoperability testing, and modding research.
-- See `LICENSE.txt` for bundled license terms where provided.
+## License
 
-## Contribution
-
-Pull requests are welcome for:
-
-- Desktop compatibility fixes
-- Missing API shims for Luanti/Minetest
-- Bugfixes in extracted mods
-- Documentation improvements
+See [LICENSE.txt](LICENSE.txt).
