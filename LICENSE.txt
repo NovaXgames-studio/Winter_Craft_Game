@@ -1,3 +1,11 @@
+Wintercraft Reborn - License and Attribution
+--------------------------------------------
+Creator and project maintainer: NovaX Games
+Copyright (C) 2026 NovaX Games
+
+This project includes third-party code and media.
+Original licenses and copyright notices are preserved below.
+
 License of media (textures and sounds)
 --------------------------------------
 Copyright (C) 2010-2012 celeron55, Perttu Ahola <celeron55@gmail.com>
